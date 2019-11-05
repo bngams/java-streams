@@ -23,11 +23,9 @@ public class Joining {
     }
 
     public static String namesToString(List<Person> people) {
-        // TODO: implements
-        // Convert collection to Stream
-        // Map Person to name
-        // Join names
-        return null;
+        return people.stream() // Convert collection to Stream
+                .map(Person::getName) // Map Person to name
+                .collect(joining(", ", "Names: ", ".")); // Join names
     }
 
 }

@@ -16,10 +16,8 @@ public class Sum {
     }
 
     public static int calculate(List<Integer> people) {
-        // TODO: implements
-        // Convert collection to Stream
-        // Sum elements with 0 as starting value
-        return 0;
+        return people.stream() // Convert collection to Stream
+                .reduce(0, (total, number) -> total + number); // Sum elements with 0 as starting value
     }
 
 }

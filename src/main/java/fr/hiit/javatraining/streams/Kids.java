@@ -17,11 +17,10 @@ public class Kids {
     }
 
     public static Set<String> getKidNames(List<Person> people) {
-        // TODO: implements
-        // Filter kids (under age of 18)
-        // Map Person elements to names
-        // Collect values to a Set
-        return null;
+        return people.stream()
+                .filter(person -> person.getAge() < 18) // Filter kids (under age of 18)
+                .map(Person::getName) // Map Person elements to names
+                .collect(toSet()); // Collect values to a Set
     }
 
 }

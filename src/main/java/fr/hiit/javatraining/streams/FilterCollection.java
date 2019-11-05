@@ -21,11 +21,9 @@ public class FilterCollection {
     }
 
     public static List<String> transform(List<String> collection) {
-        // TODO: implements
-        // Convert collection to Stream
-        // Filter elements with length smaller than 4 characters
-        // Collect results to a new list
-        return null;
+        return collection.stream() // Convert collection to Stream
+                .filter(value -> value.length() < 4) // Filter elements with length smaller than 4 characters
+                .collect(toList()); // Collect results to a new list
     }
 
 }

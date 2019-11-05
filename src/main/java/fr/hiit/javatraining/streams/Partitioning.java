@@ -19,10 +19,8 @@ public class Partitioning {
     }
 
     public static Map<Boolean, List<Person>> partitionAdults(List<Person> people) {
-        // TODO: implements
-        // Convert collection to Stream
-        // Partition stream of people into adults (age => 18) and kids
-        return null;
+        return people.stream() // Convert collection to Stream
+                .collect(partitioningBy(p -> p.getAge() >= 18)); // Partition stream of people into adults (age => 18) and kids
     }
 
 }

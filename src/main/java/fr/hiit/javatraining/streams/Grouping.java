@@ -24,10 +24,8 @@ public class Grouping {
     }
 
     public static Map<String, List<Person>> groupByNationality(List<Person> people) {
-        // TODO: implements
-        // Convert collection to Stream
-        // Group people by nationality
-        return null;
+        return people.stream() // Convert collection to Stream
+                .collect(groupingBy(Person::getNationality)); // Group people by nationality
     }
 
 }

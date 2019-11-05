@@ -21,11 +21,9 @@ public class FlatCollection {
     }
 
     public static List<String> transform(List<List<String>> collection) {
-        // TODO: implements
-        // Convert collection to Stream
-        // Replace list with stream
-        // Collect results to a new list
-        return null;
+        return collection.stream() // Convert collection to Stream
+                .flatMap(value -> value.stream()) // Replace list with stream
+                .collect(toList()); // Collect results to a new list
     }
 
 }

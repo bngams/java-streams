@@ -22,8 +22,9 @@ public class PeopleStats {
     }
 
     public static IntSummaryStatistics getStats(List<Person> people) {
-        // TODO: implements
-        return null;
+        return people.stream()
+                .mapToInt(Person::getAge)
+                .summaryStatistics();
     }
 
 }

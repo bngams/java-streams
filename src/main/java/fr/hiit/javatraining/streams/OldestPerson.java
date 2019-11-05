@@ -6,7 +6,7 @@ import java.util.List;
 public class OldestPerson {
 
     public static Person getOldestPerson7(List<Person> people) {
-        Person oldestPerson = new Person("", 0, null);
+        Person oldestPerson = new Person("", 0, "");
         for (Person person : people) {
             if (person.getAge() > oldestPerson.getAge()) {
                 oldestPerson = person;
@@ -16,11 +16,9 @@ public class OldestPerson {
     }
 
     public static Person getOldestPerson(List<Person> people) {
-        // TODO: implements
-        // Convert collection to Stream
-        // Compares people ages
-        // Gets stream result
-        return null;
+        return people.stream() // Convert collection to Stream
+                .max(Comparator.comparing(Person::getAge)) // Compares people ages
+                .get(); // Gets stream result
     }
 
 }

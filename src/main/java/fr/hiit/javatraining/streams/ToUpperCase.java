@@ -19,11 +19,9 @@ public class ToUpperCase {
     }
 
     public static List<String> transform(List<String> collection) {
-        // TODO: implements
-        // Convert collection to Stream
-        // Convert each element to upper case
-        // Collect results to a new list
-        return null;
+        return collection.stream() // Convert collection to Stream
+                .map(String::toUpperCase) // Convert each element to upper case
+                .collect(toList()); // Collect results to a new list
     }
 
 }
