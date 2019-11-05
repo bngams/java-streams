@@ -39,7 +39,7 @@ PeopleStats (summaryStatistics)
 
 Get people statistics: average age, count, maximum age, minimum age and sum og all ages.
 
-Partitionaing (partitioningBy)
+Partitioning (partitioningBy)
 =========================
 
 Partition adults and kids
@@ -48,3 +48,14 @@ Grouping (groupingBy)
 =========================
 
 Group people by nationality
+
+Joining (groupingBy)
+=========================
+
+Join names
+
+
+Credits
+=========================
+Credits to 
+https://technologyconversations.com/2014/11/04/java-8-streams-micro-katas/amp/
